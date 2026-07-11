@@ -1,8 +1,6 @@
-package ru.netology;
+package ru.netology.data;
 
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.config.HttpClientConfig;
-import io.restassured.config.RestAssuredConfig;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
