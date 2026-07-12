@@ -33,7 +33,6 @@ public class DataGenerator {
             sendRequest(user);
             return user;
         }
-
     }
 
     @Value

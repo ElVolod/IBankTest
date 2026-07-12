@@ -8,7 +8,6 @@ import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.given;
 
 public class ApiHelper {
-
     private static final RequestSpecification requestSpec = new RequestSpecBuilder()
             .setBaseUri("http://localhost")
             .setPort(9999)
@@ -18,18 +17,15 @@ public class ApiHelper {
             .build();
 
     private ApiHelper() {
-
     }
 
     static void sendRequest(DataGenerator.RegistrationDto user) {
-            given()
+        given()
                 .spec(requestSpec)
                 .body(user)
                 .when().log().all()
                 .post("/api/system/users")
                 .then().log().all()
                 .statusCode(200);
-
     }
-
 }
